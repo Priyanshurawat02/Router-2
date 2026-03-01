@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import "./App.css";
+import Users from "./pages/User";
 
 function Nav() {
   const { user } = useAuth();
@@ -13,6 +14,7 @@ function Nav() {
     <nav>
       <Link to="/">Home</Link>
       <Link to="/login">Login</Link>
+         <Link to="/users">Userss</Link>
       {user && <Link to="/dashboard">Dashboard</Link>}
     </nav>
   );
@@ -26,6 +28,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/users" element={<Users />} />
           <Route
             path="/dashboard"
             element={
